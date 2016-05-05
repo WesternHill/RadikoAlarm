@@ -18,6 +18,7 @@
 		04A2C1B51902ADD0005E590F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A2C1941902ADD0005E590F /* Cocoa.framework */; };
 		04A2C1BD1902ADD0005E590F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04A2C1BB1902ADD0005E590F /* InfoPlist.strings */; };
 		04A2C1BF1902ADD0005E590F /* RadikoAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2C1BE1902ADD0005E590F /* RadikoAlarmTests.m */; };
+		969799051CDA17CB003A8CFA /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969799041CDA17CB003A8CFA /* AudioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +45,14 @@
 		04A2C1A61902ADD0005E590F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04A2C1A71902ADD0005E590F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04A2C1AA1902ADD0005E590F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		04A2C1AC1902ADD0005E590F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04A2C1AC1902ADD0005E590F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images.xcassets; sourceTree = "<group>"; };
 		04A2C1B21902ADD0005E590F /* RadikoAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadikoAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A2C1B31902ADD0005E590F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A2C1BA1902ADD0005E590F /* RadikoAlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RadikoAlarmTests-Info.plist"; sourceTree = "<group>"; };
 		04A2C1BC1902ADD0005E590F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04A2C1BE1902ADD0005E590F /* RadikoAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadikoAlarmTests.m; sourceTree = "<group>"; };
+		969799031CDA17CB003A8CFA /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		969799041CDA17CB003A8CFA /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				04A2C1A61902ADD0005E590F /* AppDelegate.h */,
 				04A2C1A71902ADD0005E590F /* AppDelegate.m */,
+				969799031CDA17CB003A8CFA /* AudioController.h */,
+				969799041CDA17CB003A8CFA /* AudioController.m */,
 				04A2C1A91902ADD0005E590F /* MainMenu.xib */,
 				04A2C1AC1902ADD0005E590F /* Images.xcassets */,
 				04A2C19B1902ADD0005E590F /* Supporting Files */,
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969799051CDA17CB003A8CFA /* AudioController.m in Sources */,
 				04A2C1A81902ADD0005E590F /* AppDelegate.m in Sources */,
 				04A2C1A11902ADD0005E590F /* main.m in Sources */,
 			);
@@ -315,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -344,8 +351,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -353,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -378,6 +387,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -389,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RadikoAlarm/RadikoAlarm-Prefix.pch";
 				INFOPLIST_FILE = "RadikoAlarm/RadikoAlarm-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,6 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RadikoAlarm/RadikoAlarm-Prefix.pch";
 				INFOPLIST_FILE = "RadikoAlarm/RadikoAlarm-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -466,6 +478,7 @@
 				04A2C1C41902ADD0005E590F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04A2C1C51902ADD0005E590F /* Build configuration list for PBXNativeTarget "RadikoAlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +487,7 @@
 				04A2C1C71902ADD0005E590F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
