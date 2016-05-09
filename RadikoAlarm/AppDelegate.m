@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AudioController.h"
 
 @implementation AppDelegate
 
@@ -48,7 +49,9 @@
 	NSTask *task = [[NSTask alloc] init];
 	[task setLaunchPath:@"/Volumes/Macintosh HD/Applications/radiko_player_air.app/Contents/MacOS/radiko_player_air"];
 //	[task setArguments:[NSArray arrayWithObject:@"radiko_player_air"]];
-	[task launch];
+	//	[task launch];
+    AudioController *avplayer = [[AudioController alloc] init];
+    [avplayer play];
 
 }
 
@@ -60,6 +63,7 @@
 	[task setArguments:[NSArray arrayWithObject:@"radiko_player_air"]];
 
 	[task launch];
+
 }
 
 /*radikoが起動しているか*/
@@ -103,7 +107,9 @@
 //アラーム鳴動
 -(void)ringAlarm{
 	if([self alarmShouldRing]){
-		if(![self radikoIsRunning]) [self bootRadiko];
+        if(![self radikoIsRunning]){
+         [self bootRadiko];
+        }
 	}else{
 		if([self radikoIsRunning]) [self killRadiko];
 	}
