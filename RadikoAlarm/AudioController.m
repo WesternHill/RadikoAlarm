@@ -13,10 +13,10 @@
 @implementation AudioController
 
 
--(void)play{
+-(void)play:(NSString *)path{
     NSLog(@"Start playing");
     
-    NSURL *podcastUrl = [[NSURL alloc] initFileURLWithPath:@"/Users/tetsurou/Music/iTunes/iTunes Media/Podcasts/English News - NHK WORLD RADIO JAPAN/NHK WORLD RADIO JAPAN - English News at 14_01 (JST), August 28.mp3"];
+    NSURL *podcastUrl = [[NSURL alloc] initFileURLWithPath:path];
     NSError *err;
     if([podcastUrl checkResourceIsReachableAndReturnError:&err]==NO){
         NSLog(@"URL is incorrect");
@@ -24,10 +24,7 @@
         return;
     }
     
-    AVPlayerItem *playItem = [AVPlayerItem playerItemWithURL:podcastUrl];
-    [playItem addObserver:self forKeyPath:@"PlayStatus" options:0 context:NULL];
-    
-    player = [AVPlayer playerWithPlayerItem:playItem];
+    player = [[AVPlayer alloc] initWithURL:podcastUrl];
     
     [player play];
 }

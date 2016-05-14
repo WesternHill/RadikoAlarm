@@ -13,6 +13,7 @@
 	IBOutlet NSButton *killRadikoButton;
 	IBOutlet NSTextField *clkField;
 	IBOutlet NSTextField *dateField;
+    IBOutlet NSTextField *nextRingDate; // NOT implemented yet
 	IBOutlet NSDatePicker *startTime;
 	IBOutlet NSDatePicker *endTime;
 	IBOutlet NSButton *sun;
@@ -22,6 +23,7 @@
 	IBOutlet NSButton *thr;
 	IBOutlet NSButton *fri;
 	IBOutlet NSButton *sat;
+    IBOutlet NSProgressIndicator *leftTimeIndicator;// NOT implemented yet
 
 	NSTimer *timer;
 }

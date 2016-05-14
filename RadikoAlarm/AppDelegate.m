@@ -14,20 +14,20 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	//bootRadikoボタンのセットアップ
-	[bootRadikoButton setTitle:@"Launch Radiko"];
+	[bootRadikoButton setTitle:@"Ring"];
 	[bootRadikoButton setEnabled:YES];
 	[bootRadikoButton setTarget:self];
 	[bootRadikoButton setAction:@selector(bootRadiko)];
 	
 	//killRadikoボタンのセットアップ
-	[killRadikoButton setTitle:@"Kill Radiko"];
+	[killRadikoButton setTitle:@"Stop ringing"];
 	[killRadikoButton setEnabled:YES];
 	[killRadikoButton setTarget:self];
 	[killRadikoButton setAction:@selector(killRadiko)];
 	
 	//Data&ClkFieldのセットアップ
-	[dateField setFont:[NSFont fontWithName:@"Arial" size:20]];
-	[clkField setFont:[NSFont fontWithName:@"Arial" size:50]];
+    [dateField setFont:[NSFont fontWithName:@"Helvetica Neue Light" size:20]];
+    [clkField setFont:[NSFont fontWithName:@"Helvetica Neue Light" size:50]];
 	timer = [NSTimer scheduledTimerWithTimeInterval:1.0
 																					 target:self
 																				 selector:@selector(refleshClock)
@@ -66,7 +66,7 @@
 
 }
 
-/*radikoが起動しているか*/
+/* Radiko is launched already ? */
 -(BOOL)radikoIsRunning{
 	 NSWorkspace* ws = [NSWorkspace sharedWorkspace];
 	NSArray *runningApps = [ws runningApplications];

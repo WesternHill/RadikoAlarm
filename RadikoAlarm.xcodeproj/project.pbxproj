@@ -18,6 +18,8 @@
 		04A2C1B51902ADD0005E590F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A2C1941902ADD0005E590F /* Cocoa.framework */; };
 		04A2C1BD1902ADD0005E590F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04A2C1BB1902ADD0005E590F /* InfoPlist.strings */; };
 		04A2C1BF1902ADD0005E590F /* RadikoAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2C1BE1902ADD0005E590F /* RadikoAlarmTests.m */; };
+		9658BE041CE4CEA200EAE8F5 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9658BE031CE4CEA200EAE8F5 /* alarm.mp3 */; };
+		9658BE081CE4DA4400EAE8F5 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658BE071CE4DA4400EAE8F5 /* AlarmController.m */; };
 		969799051CDA17CB003A8CFA /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969799041CDA17CB003A8CFA /* AudioController.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,9 @@
 		04A2C1BA1902ADD0005E590F /* RadikoAlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RadikoAlarmTests-Info.plist"; sourceTree = "<group>"; };
 		04A2C1BC1902ADD0005E590F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04A2C1BE1902ADD0005E590F /* RadikoAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadikoAlarmTests.m; sourceTree = "<group>"; };
+		9658BE031CE4CEA200EAE8F5 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = "../../../../../../Volumes/Data HDD/Music/alarm.mp3"; sourceTree = "<group>"; };
+		9658BE061CE4DA2600EAE8F5 /* AlarmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
+		9658BE071CE4DA4400EAE8F5 /* AlarmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		969799031CDA17CB003A8CFA /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		969799041CDA17CB003A8CFA /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				04A2C19A1902ADD0005E590F /* RadikoAlarm */,
-				04A2C1B81902ADD0005E590F /* RadikoAlarmTests */,
 				04A2C1931902ADD0005E590F /* Frameworks */,
 				04A2C1921902ADD0005E590F /* Products */,
 			);
@@ -122,7 +126,11 @@
 				04A2C1A71902ADD0005E590F /* AppDelegate.m */,
 				969799031CDA17CB003A8CFA /* AudioController.h */,
 				969799041CDA17CB003A8CFA /* AudioController.m */,
+				9658BE061CE4DA2600EAE8F5 /* AlarmController.h */,
+				9658BE071CE4DA4400EAE8F5 /* AlarmController.m */,
+				04A2C1B81902ADD0005E590F /* RadikoAlarmTests */,
 				04A2C1A91902ADD0005E590F /* MainMenu.xib */,
+				9658BE031CE4CEA200EAE8F5 /* alarm.mp3 */,
 				04A2C1AC1902ADD0005E590F /* Images.xcassets */,
 				04A2C19B1902ADD0005E590F /* Supporting Files */,
 			);
@@ -148,7 +156,7 @@
 				04A2C1B91902ADD0005E590F /* Supporting Files */,
 			);
 			path = RadikoAlarmTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		04A2C1B91902ADD0005E590F /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -239,6 +247,7 @@
 				04A2C1AD1902ADD0005E590F /* Images.xcassets in Resources */,
 				04A2C1A51902ADD0005E590F /* Credits.rtf in Resources */,
 				04A2C1AB1902ADD0005E590F /* MainMenu.xib in Resources */,
+				9658BE041CE4CEA200EAE8F5 /* alarm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969799051CDA17CB003A8CFA /* AudioController.m in Sources */,
+				9658BE081CE4DA4400EAE8F5 /* AlarmController.m in Sources */,
 				04A2C1A81902ADD0005E590F /* AppDelegate.m in Sources */,
 				04A2C1A11902ADD0005E590F /* main.m in Sources */,
 			);
